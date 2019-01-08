@@ -1,0 +1,38 @@
+﻿<html>
+    <head>
+        <title>টেলিটক ত্রিজি মডেম</title>
+        <style>
+	    h3{color:green;}
+	    .code{color:purple;}
+	    .key{color:olive;}
+	    .keyword{color:chocolate;}
+            .alert{color:red;}
+	</style>
+    </head>
+    <body>
+    	<div>
+    	<a href="index.html"><img src="modem.jpg" height="50" width="150"></a>
+    	</div>
+        <h3>##উবুন্টু তে টেলিটক ত্রিজি মডেম চালানোর জন্য ড্রাইভার ইন্সটল করার পদ্ধতিঃ</h3>
+<p>উবুন্টুতে টেলিটক ত্রিজি কানেক্ট করার জন্য আপনাকে যা করতে হবে তা হলও প্রথমে আপনার মডেমের জন্য ড্রাইভার সফটওয়্যার ইন্সটল করতে হবে। সেটা করার জন্য প্রথমে আপনার মডেমটিকে ইউএসবি পোর্টে ইনসার্ট করুন। ইনসার্ট করার পর দেখবেন আপনার <b class="keyword">Home Folder</b> এর <b class="keyword">Computer</b> এর উপরে <b class="keyword">Teletalk 3G</b> নামে একটি <b>রিমুভেবল মিডিয়া</b> দেখাচ্ছে। সেটা ওপেন করুন। ওপেন করার পর সেখানে তিনটি ফোল্ডার দেখতে পাবেন। একটিতে উইন্ডোসের জন্য ড্রাইভার দেয়া, অন্যটিতে ম্যাক  ওএস এর জন্য ড্রাইভার দেয়া এবং <b>একটি লিনাক্স অর্থাৎ আপনার উবুন্টুর ড্রাইভার।</b> তাহলে লিনাক্স নামের ফোল্ডারটি ওপেন করুন। সেখানে <b class="keyword">PCL_BGTLK.tar.gz</b> নামে একটি কমপ্রেসড টরবল ফাইল দেখতে পাবেন। সেটি ডাবল ক্লিক করে ওপেন করুন। তাহলে দেখবেন এটি <b class="keyword">Archive Manager</b> দিয়ে ওপেন হবে। এবার এটি আপনার পছন্দের মত যায়গায় <b class="keyword">Extract</b> করুন। ধরুন এটা আপনি <b class="keyword">Desktope</b> এ <b class="keyword">Extract</b> করেছেন।</p>
+	<p>ঠিক ভাবে <b class="keyword">Extract</b> সম্পন্ন হলে  এবার <b class="keyword">Terminal</b> ওপেন করুন। <b class="keyword">Terminal</b> ওপেন করার জন্য আপনার <b class="key">Window</b> কি চাপুন এবং  লিখুন <b>Terminal</b> অথবা <b class="key">Ctrl + Alt + T</b> চাপুন তাহলে <b class="keyword">Terminal</b> পেয়ে যাবেন। এবার <b class="keyword">Terminal</b> এ লিখুন  <b class="code">“cd /আপনার পছন্দের জায়গা যেখানে আপনি ঐ ফাইলটি Extract করেছে/ফাইলটির নাম(PCL_BGTLK)”</b> লিখে <b class="key">Enter</b> চাপুন। যদি <b class="keyword">Desktop</b> এ করে থাকেন তাহলে লিখুন <b class="code">” cd /home/username/Desktop/PCL_BGTLK ”</b> লিখে <b class="key">Enter</b> চাপুন। এটা হয়ে গেলে এবার নিচের কোড লিখুন <b class="code">” sudo ./install.sh ”</b> লিখে <b class="key">Enter</b> চাপুন দেখবেন আপনার টেলিটক ত্রিজি মডেমের ড্রাইভার ইন্সটল হয়ে গেছে।</p>
+        <p><a href="http://goo.gl/JZPxj"><b class="alert">ইন্সটল হয় নি!!</b></a></p>
+		<div>
+		<h4 style="color: green"><b>সুবিধা:</b></h4>
+		<p>এ ক্ষেত্রে আপনার যে সুবিধা হবে সেটা হল গ্রাফিক্যাল ইউসার ইন্টারফেস সহ একটি সফ্টওয্যার পাবেন। যদি উইন্ডোসে ব্যাবহার করে থাকেন তবে একদম সেরকম। এই সফ্টওয়্যার দিয়ে মডেম কানেক্ট করতে পারবেন। এ ছাড়াও মেসেজ পড়া, পাঠান, কল করা ইত্যাদি করতে পারবেন। এছাড়া Modem Settings পাবেন।</p>
+		</div>
+		<div>
+		<h4 style="color: red"><b>অসুবিধা</b></h4>
+		<p>এ ক্ষেত্রে আপনার সবচেয়ে বড় যে অসুবিধাটি হবে সেটা হল Network Manager মডেম ডিটেক্ট করতে পারবে না। যে কারণে আপনি Ubuntu Software Center, VPN, Wifi Hotspot ইত্যাদি ব্যাবহার করতে পারবেন না।</br>
+<a href="https://googledrive.com/host/0B143MDG0QBkSTTBqUUZyUzgyNjg/wvdial_problem.html">Network Manager মডেম ডিটেক্ট করতে না পারার কারণ</a>
+</p>
+		</div>
+		<a href="http://www.easycounter.com/">
+<img src="http://www.easycounter.com/counter.php?teletalk"
+border="0" alt="Free Hit Counters"></a>
+<br><a href="http://www.easycounter.com/">Web Counters</a>
+        <div>
+        <p>যে কোন জিজ্ঞাসা অথবা মতামতের জন্য <a href="mailto:sajib.finix@gmail.com">Mail</a> (sajib.finix@gmail.com) করুন।</p>
+        </div>
+    </body>
+</html>

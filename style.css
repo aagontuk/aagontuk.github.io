@@ -1,0 +1,26 @@
+body {
+}
+
+div.menu {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -200px;
+	margin-left: -100px;
+}
+
+div.headerimg {
+	position: fixed;
+	top: 10%;
+	left: 10%;
+	margin-top: -120px;
+	margin-left: -180px;
+}
+
+div.footerimg {
+	position: fixed;
+	top: 50%;
+	left: 80%;
+	margin-top: 40px;
+	margin-left: -10px;
+}
