@@ -1,0 +1,155 @@
+<html>
+	<head>
+		<title>Installing GLIBC: The dirty way</title>
+		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=bash;skin=sunburst"></script>
+		<style>
+			p {
+			  font-size: 18px;
+			}
+
+			pre {
+			  font-size: 18px;
+			}
+
+			li {
+			  font-size: 18px;
+			}
+		</style>
+	</head>
+
+	<body>
+	<center>
+	<h1> Installing GLIBC: The dirty way </h1>
+	<p> FEB-10-2020 </p>
+	</center>
+
+	<h1> Why am I being dirty? </h1>
+	<p> Recently I need to compile <code>glibc</code> from source and
+	install system wide. I came accross follow documents:</p>
+
+	<ul>
+		<li><a href="https://www.gnu.org/software/libc/manual/html_node/Installation.html">Official installation guide</a></li>
+		<li>A whole chapter in <a href="https://sensperiodit.files.wordpress.com/2011/04/hagen-the-definitive-guide-to-gcc-2e-apress-2006.pdf">this</a> book dedicated to installing <code>glibc</code></li>
+		<li><a href="https://www.tldp.org/HOWTO/html_single/Glibc-Install-HOWTO/">A TLDP HOWTO</a></li>
+	</ul>
+
+	<p> In a nutshell these documents suggest following steps for
+	compiling and installing glibc system wide:</p>
+
+	<ul>
+		<li>Obtain source.</li>
+		<li>Configure <code>glibc</code> with <code>--prefix=/usr</code> so that <code>glibc</code> respects your system structure and installs accordingly.</li>
+		<li>Run <code>make</code>.</li>
+		<li>Keep some statically linked backup tools so that if
+		anything goes wrong you can recover from that</li>
+		<li>Log into single usermode and run <code>make install</code>.</li>
+		<li>And thats it!</li>
+	</ul>
+
+	<p> But...I broke Ubuntu-18.04! Twice! I didn't find any other
+	documents other than I mentioned above. If you know any graceful way
+	please <a href="mailto:sajib.finix@gmail.com">let me know</a>.</p>
+
+	<h1> Why was my system breaking? </h1>
+	<p> I noticed Debian based systems keep all the libraries in
+	<code>/usr/lib/x86_64-linux-gnu</code>. But <code>glibc</code> installs
+	all of the libraries in <code>/usr/lib64</code> even if <code>--prefix=/usr</code> is used which should respect system directory structure according to
+	the documentation. So at the time of installation at one point there
+	are two libraries installed. So collision happens.</p>
+
+	<h1> So how to do it? </h1>
+	<p> I did all the experiments inside a Debian Buster VM. Though I
+	tested for Debian, it should work in any GNU/Linux distribution.
+	Well in theory. Lets assume I am installing glibc-2.30.
+	Follow these steps:</p>
+
+	<ul>
+		<li>Check if you have <code>busybox</code> installed. If
+		it is installed, check if it is statically linked. By 
+		default in Debian `busybox` is dynamically linked. I don't
+		know why? This is weird! Run
+		<code>$ ldd /bin/busybox</code>. It should report that it is
+		not a dynamic executable if it is statically linked. Otherwise
+		download statically linked binary from <a href="https://www.busybox.net/downloads/binaries/">here</a>
+		or if you are in Debian base system
+		<code>$ sudo apt install busybox-static</code>.
+		<code>Busybox</code> is an amazing
+		tool.
+		It has all the commands you need to manage a GNU/Linux system.
+		And as is statically linked you can use them in time of an
+		Armageddon.</li></br>
+
+		<li>Configure and build <code>glibc</code>. Lets assume my
+		glibc source is in <code>~/glibc/</code>:
+		<pre>
+		$ cd ~
+		$ mkdir glibc-build
+		$ cd glibc-build
+		$ ../glibc/configure --enable-add-ons --prefix=/usr
+		$ env LANGUAGE=C LC_ALL=C make -j 4
+		</pre>
+		</li>
+		</br>
+
+		<li>Now install `glibc` in a custom direcotory of your choice.
+		Lets assume I have installed in <code>~/glibc-install</code>
+		<pre>
+		$ cd ~
+		$ mkdir glibc-install
+		$ cd glibc-build
+		$ make install DESTDIR=~/glibc-install
+		</pre>
+		</li>
+		</br>
+
+		<li> This will install all the libraries in
+		<code>~/glibc-install</code>. Now examine the directory. You
+		will notice that all the libraries are installed in
+		<code>~/glibc-install/lib64</code> and
+		<code>~/glibc-install/usr/lib64</code>. As Debian stores all
+		the libraries in <code>/lib/x86_64-linux-gnu</code> simply
+		copy them using busybox. You have to use busybox. If you do it
+		using `cp` or other tool it will be terminated in the middle
+		because of collision. Before performing copy operation gain
+		root access. After that you will no longer be able to use
+		sudo. So this is a mandatory step.
+		<pre>
+		$ sudo su
+		$ busybox cp -arfv ~/glibc-install/lib64/* /lib/x86_64-linux-gnu/
+		$ busybox cp -arfv ~/glibc-install/usr/lib64/* /lib/x86_64-linux-gnu/
+		</pre>
+		</li>
+		</br>
+
+		<li> Now you will no be able to use any commanda as there is
+		still a broken symlink <code>ld-linux-x86-64.so.2</code>
+		in <code>/usr/lib64</code> which should point to
+		<code>/lib/x86_64-linux-gnu/ld-VERSION.so</code> in our case
+		<code>/lib/x86_64-linux-gnu/ld-2.30.so</code>. You have to
+		fix this.
+		<pre>
+		$ busybox rm /usr/lib64/ld-linux-x86-64.so.2
+		$ busybox ln -s /lib/x86_64-linux-gnu/ld-2.30.so /usr/lib64/ld-linux-x86-64.so.2
+		</pre>
+		</li>
+		</br>
+
+		<li> Voila! Now check all the commands are working! </li></br>
+
+		<li> Optionally you can copy other folders as it is in system.
+		Mostly the are different tools like `ldd`, `ldconfig` etc.
+		<pre>
+		$ cp -rv ~/glibc-install/sbin /usr
+		$ cp -rv ~/glibc-install/usr/bin /usr
+		$ cp -rv ~/glibc-install/usr/sbin /usr
+		$ cp -rv ~/glibc-install/usr/include /usr
+		$ cp -rv ~/glibc-install/usr/share /usr
+		</pre>
+		</li>
+	</ul>
+
+	</p> And thats it! If you follow these steps an need help or if you
+	have any kind of suggestions please
+	<a href="mailto:sajib.finix@gmail.com">send a mail</a>.</p>
+	</body>
+</html>
