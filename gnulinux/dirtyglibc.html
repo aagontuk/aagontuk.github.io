@@ -136,13 +136,19 @@
 
 		<li> Voila! Now check all the commands are working! </li></br>
 
+		<li> Now you can replace old <code>/usr/include</code> with new include
+		files provided with the new <code>glibc</code>.
+		<pre>
+		$ cp -rv ~/glibc-install/usr/include /usr
+		</pre>
+		</li>
+
 		<li> Optionally you can copy other folders as it is in the system.
 		Mostly they are different tools like `ldd`, `ldconfig` etc.
 		<pre>
 		$ cp -rv ~/glibc-install/sbin /usr
 		$ cp -rv ~/glibc-install/usr/bin /usr
 		$ cp -rv ~/glibc-install/usr/sbin /usr
-		$ cp -rv ~/glibc-install/usr/include /usr
 		$ cp -rv ~/glibc-install/usr/share /usr
 		</pre>
 		</li>
