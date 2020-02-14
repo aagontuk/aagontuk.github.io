@@ -110,9 +110,11 @@
 		the libraries in <code>/lib/x86_64-linux-gnu</code> simply
 		copy them using busybox. You have to use busybox. If you do it
 		using `cp` or other tool it will be terminated in the middle
-		because of collision. Before performing copy operation gain
-		root access. After that you will no longer be able to use
-		sudo. So this is a mandatory step.
+		because of collision. But before performing the copy operation
+		log into <a href="https://en.wikipedia.org/wiki/Single_user_mode">
+		single user mode</a> or kill your X server and log into the
+		<a href="https://en.wikipedia.org/wiki/Linux_console">console</a>
+		as root user. This is a mandatory step.
 		<pre>
 		$ sudo su
 		$ busybox cp -arfv ~/glibc-install/lib64/* /lib/x86_64-linux-gnu/
