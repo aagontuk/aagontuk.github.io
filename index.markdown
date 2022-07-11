@@ -11,9 +11,8 @@ My research interests are at the intersection of operating systems, networking, 
 Particularly, I am interested to use novel hardware and accelerators
 to solve emerging distributed systems problems in the post-Moore era.
 
-Before starting my PhD, I worked as a voluntary research student in [Prof. Baris Kasikci's lab](https://web.eecs.umich.edu/~barisk/).
-I worked with [Tanivr Ahmend Khan](https://web.eecs.umich.edu/~takh/) on profile guided optimizations of large application binaried
-in wirehouse scale computers to reduce i-cache misses.
+Before starting my PhD, I worked with [Tanivr Ahmend Khan](https://web.eecs.umich.edu/~takh/) on profile guided optimizations of large application binaries
+in warehouse scale computers to reduce i-cache misses.
 
 I completed my bachelor's degree from
 [Bangladesh University of Engineering and Technology](https://www.buet.ac.bd/web/).
@@ -22,7 +21,7 @@ I completed my bachelor's degree from
 
 * [ May 2022 ] I will serve on the OSDI'22 artifact evaluation committee.
 * [ September 2021 ] I will serve on the SOSP'21 artifact evaluation committee.
-* [ August 2021 ] Joined in the University of Utah, School of computing as a CS PhD student.
+* [ August 2021 ] Joined in the University of Utah, School of Computing as a CS PhD student.
 
 # Research #
 
