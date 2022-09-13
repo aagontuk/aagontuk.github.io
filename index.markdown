@@ -5,7 +5,7 @@
 layout: home
 ---
 
-I am a first year CS PhD student at the [University of Utah](https://www.cs.utah.edu/), School of Computing
+I am a second year CS PhD student at the [University of Utah](https://www.cs.utah.edu/), School of Computing
 under the supervision of [Prof. Ryan Stutsman](https://rstutsman.github.io/). I am also collaborating with [Prof. Brent Stephens](https://www.cs.utah.edu/~brent/).
 My research interests are at the intersection of operating systems, networking, and distributed systems.
 Particularly, I am interested to use novel hardware and accelerators
