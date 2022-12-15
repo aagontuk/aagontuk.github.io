@@ -33,3 +33,8 @@ I completed my bachelor's degree from
 
 * Aftifact evaluation committee, OSDI'22
 * Aftifact evaluation committee, SOSP'21
+
+# Teaching Assistantship #
+
+* Distributed Systems, University Of Utah, Fall'22
+* Operating Systems, University Of Utah, Sprint'22
