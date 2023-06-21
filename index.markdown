@@ -27,6 +27,8 @@ I completed my bachelor's degree from
 
 * A new efficient, secure, and scalable network framework to replace RDMA exploiting the programmability and offloading capability of smartNICs
 
+* A new software architecture for building services that centers around coherent accelerators and rack-scale shared memory
+
 * Accelerating the network read path of in-memory key-value stores and making Linux page cache policy configurable from userspace using eBPF
 
 # Services #
