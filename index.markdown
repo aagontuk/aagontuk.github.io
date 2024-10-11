@@ -5,7 +5,7 @@
 layout: home
 ---
 
-I am a third year CS PhD student at the [University of Utah](https://www.cs.utah.edu/), School of Computing
+I am a fourth year CS PhD student at the [University of Utah](https://www.cs.utah.edu/), School of Computing
 under the supervision of [Prof. Ryan Stutsman](https://rstutsman.github.io/). I am also collaborating with [Prof. Brent Stephens](https://www.cs.utah.edu/~brent/).
 My research interests are at the intersection of operating systems, networking, and distributed systems.
 Particularly, I am interested to use novel hardware and accelerators
@@ -18,6 +18,7 @@ I completed my bachelor's degree from
 
 # News #
 
+* [ May 2024 ] I am joining as a research intern in Hewlett Packard Labs.
 * [ October 2023 ] I will present my research work on SmartNIC offloading in SOSP Doctoral Workshop.
 * [ May 2022 ] I will serve on the OSDI'22 artifact evaluation committee.
 * [ September 2021 ] I will serve on the SOSP'21 artifact evaluation committee.
@@ -25,11 +26,11 @@ I completed my bachelor's degree from
 
 # Research #
 
+* Optimizing the communication infrastructure to support low-latency high-throughput LLM inference
+
 * A new efficient, secure, and scalable framework for remote memory access and function offloading exploiting the programmability and offloading capability of smartNICs
 
 * A new software architecture for building services that centers around coherent accelerators and rack-scale shared memory
-
-* Accelerating the network read path of in-memory key-value stores using eBPF
 
 # Services #
 
