@@ -47,8 +47,8 @@ low-latency data movement in modern data center networks.
 
 # Services #
 
-* Aftifact evaluation committee, OSDI'22
-* Aftifact evaluation committee, SOSP'21
+* Artifact evaluation committee, OSDI'22
+* Artifact evaluation committee, SOSP'21
 
 # Teaching Assistantship #
 
