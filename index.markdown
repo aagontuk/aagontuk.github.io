@@ -7,8 +7,7 @@ layout: home
 
 I am a fifth year CS PhD student at the [University of Utah](https://www.cs.utah.edu/), School of Computing
 under the supervision of [Prof. Ryan Stutsman](https://rstutsman.github.io/). I am also collaborating with [Prof. Brent Stephens](https://www.cs.utah.edu/~brent/).
-My research interests are at the intersection of operating systems, networking, and distributed systems.
-Particularly, my research focuses on enhancing the scalability of modern data centers through the use of emerging hardware and accelerator offloads in the post-Moore era.
+My research interests include low-latency kernel bypass systems, disaggregated memory systems, SmartNIC offload, and systems for machine learning. My research focuses on enhancing the scalability and efficiency of modern data centers through the use of emerging hardware and accelerator offloads
 
 Before starting my PhD, I worked with [Tanvir Ahmend Khan](https://takhandipu.github.io/) on load-time code layout optimizations of large application binaries in warehouse scale computers.
 
@@ -25,6 +24,11 @@ I completed my bachelor's degree from
 
 # Publications #
 
+**Efficient Remote Memory Ordering for Non-Coherent Interconnects**<br>
+Wei Siew Liew<sup>*</sup>, Md Ashfaqur Rahaman<sup>∗</sup>, Adarsh Patil, Ryan Stutsman, and Vijay Nagarajan.<br>
+ASPLOS, 2026. <a href=https://dl.acm.org/doi/epdf/10.1145/3779212.3790156>https://dl.acm.org/doi/epdf/10.1145/3779212.3790156</a>
+*Equal contribution
+
 **Network-accelerated Active Messages**<br>
 <u>Md Ashfaqur Rahaman</u>, Alireza Sanaee, Todd Thornley, Sebastiano Miano, Gianni Antichi,
 Brent E Stephens, and Ryan Stutsman.<br>
@@ -36,10 +40,10 @@ HotOS, 2025. <a href="https://dl.acm.org/doi/pdf/10.1145/3713082.3730389">https:
 
 # Research #
 
-* A new efficient, secure, and scalable framework for remote memory access and function offloading exploiting the programmability and offloading capability of smartNICs
-
 * Exploring new Host-NIC interface designs and building systems to enable high-bandwidth and
 low-latency data movement in modern data center networks.
+
+* A new efficient, secure, and scalable framework for remote memory access and function offloading exploiting the programmability and offloading capability of smartNICs
 
 * Optimizing the communication infrastructure to support low-latency high-throughput LLM inference
 
