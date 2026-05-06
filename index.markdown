@@ -26,7 +26,7 @@ I completed my bachelor's degree from
 
 **Efficient Remote Memory Ordering for Non-Coherent Interconnects**<br>
 Wei Siew Liew<sup>*</sup>, Md Ashfaqur Rahaman<sup>∗</sup>, Adarsh Patil, Ryan Stutsman, and Vijay Nagarajan.<br>
-ASPLOS, 2026. <a href=https://dl.acm.org/doi/epdf/10.1145/3779212.3790156>https://dl.acm.org/doi/epdf/10.1145/3779212.3790156</a>
+ASPLOS, 2026. <a href="https://dl.acm.org/doi/epdf/10.1145/3779212.3790156">https://dl.acm.org/doi/epdf/10.1145/3779212.3790156</a>
 *Equal contribution
 
 **Network-accelerated Active Messages**<br>
