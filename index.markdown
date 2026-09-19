@@ -24,6 +24,10 @@ I completed my bachelor's degree from
 
 # Publications #
 
+**NOVA: A New Framework For Remote Memory Access**<br>
+<u>Md Ashfaqur Rahaman</u>, Alireza Sanaee, Todd Thornley, Sebastiano Miano, Gianni Antichi, Brent E Stephens, and Ryan Stutsman.<br>
+EuroSys, 2027
+
 **Efficient Remote Memory Ordering for Non-Coherent Interconnects**<br>
 Wei Siew Liew<sup>*</sup>, <u>Md Ashfaqur Rahaman<sup>∗</sup></u>, Adarsh Patil, Ryan Stutsman, and Vijay Nagarajan.<br>
 ASPLOS, 2026. <a href="https://dl.acm.org/doi/epdf/10.1145/3779212.3790156">https://dl.acm.org/doi/epdf/10.1145/3779212.3790156</a><br>
@@ -51,6 +55,7 @@ low-latency data movement in modern data center networks.
 
 # Services #
 
+* Web Chair, HotNets'26
 * Artifact evaluation committee, OSDI'22
 * Artifact evaluation committee, SOSP'21
 
