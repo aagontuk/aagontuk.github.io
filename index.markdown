@@ -33,6 +33,10 @@ Wei Siew Liew<sup>*</sup>, <u>Md Ashfaqur Rahaman<sup>∗</sup></u>, Adarsh Pati
 ASPLOS, 2026. <a href="https://dl.acm.org/doi/epdf/10.1145/3779212.3790156">https://dl.acm.org/doi/epdf/10.1145/3779212.3790156</a><br>
 *Equal contribution
 
+**DynamoServe: A Distributed Tiered Memory System for Multi-tenant LLM Serving**<br>
+Diman Zad Tootaghaj, Khaled Diab, Bob Lantz, Hanjiang Wu, K. K. Ramakrishnan, <u>Md Ashfaqur Rahaman</u>, Ryan Stutsman, Puneet Sharma, and Tushar Krishna.<br>
+MOSAIC, 2026. <a href="https://dl.acm.org/doi/pdf/10.1145/3789240.3829347">https://dl.acm.org/doi/pdf/10.1145/3789240.3829347</a><br>
+
 **Network-accelerated Active Messages**<br>
 <u>Md Ashfaqur Rahaman</u>, Alireza Sanaee, Todd Thornley, Sebastiano Miano, Gianni Antichi,
 Brent E Stephens, and Ryan Stutsman.<br>
